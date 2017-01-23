@@ -32,3 +32,4 @@ Foro: Apartado de consulta, aporte y resolución de dudas y más información de
 #  Integrantes del equipo de desarrollo:
 
 Javier Millán Campiña  -- correo: j.mollan@alumnos.urjc.es -- cuenta GitHub: javitor89
+Diego Herradon Lizana -- correo: d.herradon@alumnos.urjc.es -- cuenta GitHub: DiegoHL
