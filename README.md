@@ -18,7 +18,7 @@ El acceso a toda la parte de administración de la cuenta de usuario tanto en la
 
 #  Entidades principales:
 
-Usuario: Compra un producto en la web o utiliza la parte del foro para diferentes consultas o aporte al mismo.
+Usuario: Compra un producto en la web o utiliza la parte del foro para diferentes consultas o aporte al mismo. Además también dispondrá de una cuenta privada donde puede gestionar sus compras.
 
 Producto: En nuestro caso los teléfonos móviles que ponemos a la venta en la web.
 
