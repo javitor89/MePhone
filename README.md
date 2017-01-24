@@ -24,7 +24,7 @@ Producto: En nuestro caso los teléfonos móviles que ponemos a la venta en la w
 
 Carro de la compra: Donde los usuarios pueden ir agregando productos para comprar.
 
-Mi Cuenta: Donde los usuarios puede gestionar sus cuentas dentro de la web.
+Mensaje: Los textos posteados en el foro.
 
 Foro: Apartado de consulta, aporte y resolución de dudas y más información de valor para los usuarios de la web.
 
