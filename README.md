@@ -16,7 +16,7 @@ La consulta de todos los  terminales y precios que  tenemos a la venta, así com
 
 El acceso a toda la parte de administración de la cuenta de usuario tanto en la web de compra como en la parte del foro, referente a temas similares a gestión de un pedido, seguimiento, datos personales, de entrega, etc.
 
-#  Entidades principales:
+# Entidades principales:
 
 Usuario: Compra un producto en la web o utiliza la parte del foro para diferentes consultas o aporte al mismo. Además también dispondrá de una cuenta privada donde puede gestionar sus compras.
 
@@ -27,6 +27,12 @@ Carro de la compra: Donde los usuarios pueden ir agregando productos para compra
 Mensaje: Los textos posteados en el foro.
 
 Foro: Apartado de consulta, aporte y resolución de dudas y más información de valor para los usuarios de la web.
+
+# Servicios internos:
+
+Generacion y envío de facturas: Todos los pedidos realizados se completaran con el envío de la factura correspondiente al correo proporcionado por el cliente.
+
+Sistema de mensajería interna: El foro posee un sistema por el cual los clientes pueden comunicarse entre ellos asi como con los administradores del sitio web.
 
 
 #  Integrantes del equipo de desarrollo:
