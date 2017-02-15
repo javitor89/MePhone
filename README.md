@@ -45,4 +45,6 @@ Xiong Yi fu -- correo: Xy.fu@alumnos.urjc.es -- cuenta GitHub: Xyfuliu
 
 #  Navegacion y descripcion de la web:
 
-* Página Principal
+* Página Principal:
+
+![paginaprincipal](url completa de la imagen)
