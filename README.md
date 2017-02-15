@@ -46,5 +46,35 @@ Xiong Yi fu -- correo: Xy.fu@alumnos.urjc.es -- cuenta GitHub: Xyfuliu
 #  Navegacion y descripcion de la web:
 
 * Página Principal:
-
 ![paginaprincipal](https://github.com/javitor89/MePhone/blob/master/capturas/Principal.JPG)
+
+Mostraremos la web con su barra de búsqueda, la sección para logearse o crear una nueva cuenta de usuario.
+Una zona de accesos directos a otras partes de la web para mejorar la experiencia de navegación al usuario.
+Una zona central con las ofertas más destacadas de los productos de la web.
+
+![registro](https://github.com/javitor89/MePhone/blob/master/capturas/Registro.JPG)
+
+Nos podemos registrar en la página web.
+
+![ventanalogin](https://github.com/javitor89/MePhone/blob/master/capturas/login.JPG)
+
+Nos podemos logear en la web.
+
+![logeado](https://github.com/javitor89/MePhone/blob/master/capturas/Logeado.JPG)
+
+Tener la sesión o cerrarla en cualquier momento.
+
+![barradebusqueda](https://github.com/javitor89/MePhone/blob/master/capturas/Barra%20de%20busqueda.JPG)
+
+Utilizar nuestra zona de búsqueda flotante para consultar cualquier artículo que tengamos en venta en la web.
+
+![ofertas](https://github.com/javitor89/MePhone/blob/master/capturas/ofertas.JPG)
+
+Sección con las ofertas que tenemos en estos momentos.
+
+![contacto](https://github.com/javitor89/MePhone/blob/master/capturas/Contacto.JPG)
+
+Una parte para contactar con los administradores de la tienda.
+
+#  Diagrama de clases:
+![uml]()
