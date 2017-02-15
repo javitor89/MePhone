@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav div {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+<body>
+
+<div id="mySidenav" class="sidenav">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<span style="font-size:20px;color:#818181;" > Busqueda avanzada:</span>
+ 	<div>
+		<form action="busqueda" >
+			Marca:<br>
+			<input type="hidden" name="tipoConsulta" value="marca"/>
+			<input type="text" name="arg1" size="15"/>
+		</form>
+	</div>
+	<div>
+		<form action="busqueda" >
+			Pulgadas:<br>
+			<input type="hidden" name="tipoConsulta" value="pulgadas"/>
+			<input type="text" name="arg1" size="15"/>
+		</form>
+	</div>
+	<div>
+		<form action="busqueda" >
+			Bateria:<br>
+			<input type="hidden" name="tipoConsulta" value="bateria"/>
+			<input type="text" name="arg1" size="15"/>
+		</form>
+	</div>
+	<div>
+		<form action="busqueda" >
+			Ram:<br>
+			<input type="hidden" name="tipoConsulta" value="ram"/>
+			<input type="text" name="arg1" size="15"/>
+		</form>
+	</div>
+</div>
+
+
+	<div id="main">
+		{{> header}}
+		<span style="font-size:30px; cursor:pointer" onclick="openNav()">&#9776; Menu de busqueda</span>.
+		<br><br>
+		<span style="font-size:20px;" id="demo" >Resultado de la busqueda:</span><br><br><br>
+		{{#vista}}
+			Modelo:{{movil.modelo}}<br>
+			Marca: {{movil.marca}}<br>
+			Pulgadas: {{movil.pulgadas}}<br>
+			Bateria: {{movil.bateria}}<br>
+			Almacenamiento: {{movil.almacenamiento}}<br>
+			Ram: {{movil.ram}}<br>
+			Resolucion: {{movil.resolucion}}<br>
+			Camara: {{movil.camara}}<br>
+			Precio: {{movil.precio}}<br>
+			Stock: {{movil.stock}}<br>
+			Imagen: {{movil.imagen}}<br>
+			Oferta: {{movil.oferta}}<br><br>
+		{{/vista}}
+		{{#moviles}}
+			- Modelo: {{modelo}}, Marca: {{marca}}. <br> <a href="/busqueda?tipoConsulta=vista&arg1={{idMovil}}"><img src="/{{imagen}}" style="width:304px;height:228px;"></a> <br><br><br>
+		{{/moviles}}
+		{{> footer}}
+	</div>
+
+
+<script>
+var var1 = "{{text}}";
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+if (var1 == "oferta") {
+    document.getElementById("demo").innerHTML = "Ofertas:";
+}
+if (var1 == "stock") {
+    document.getElementById("demo").innerHTML = "Recomendaciones:";
+}
+if (var1 == "contacto") {
+    document.getElementById("demo").innerHTML = "Contacto:<br><br>diegoherradonlizana@gmail.com<br>javier.millan@gmail.com<br>dario@gmail.com";
+}
+if (var1 == "logear") {
+    document.getElementById("demo").innerHTML = "Bienvenido";
+}
+if (var1 == "logout") {
+    document.getElementById("demo").innerHTML = "Sesion cerrada";
+}
+if (var1 == "incorrecta") {
+    document.getElementById("demo").innerHTML = "Combinacion incorrecta";
+}
+if (var1 == "vista") {
+    document.getElementById("demo").innerHTML = "Detalles de producto:";
+}
+</script>
+
+	
+	
+
+	
+	
+	
+</body>
+</html>

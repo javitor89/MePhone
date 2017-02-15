@@ -1,0 +1,31 @@
+{{> header}}
+<html>
+
+
+<body>
+
+
+ 
+*** REGISTRAR USUARIO ***
+<form action="/registro">
+	<p>Nombre:
+	<input  name="nombre" type="text" placeholder="nombre"></p>
+	<p>Apellidos:
+	<input  name="apellidos" type="text" placeholder="apellidos"></p>
+	<p>Correo:
+	<input  name="correo" type="text" placeholder="correo"></p>
+	<p>Password:
+	<input  name="pass" type="text" placeholder="pass"></p>
+	<p>Numero de telefono:
+	<input  name="telefono" type="text" placeholder="telefono"></p>
+	<input  name="alta" type="hidden" value="1">
+	<input  type="submit" value="Registrar">
+</form>
+{{#mensaje}}
+Usuario registrado.<br><br>
+{{/mensaje}}
+
+
+</body>
+</html>
+{{> footer}}

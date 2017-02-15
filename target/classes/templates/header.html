@@ -1,0 +1,78 @@
+<html>
+<header style="background-color: #1540B5;">
+
+	<table style="table-layout: fixed">
+		<!--border="2"-->
+		<tr>
+			<!--FILA 1 (LOGO  /  BARRA DE BUSQUEDA / CUENTA / CARRITO   )-->
+
+			<td><a href="/busqueda?tipoConsulta=inicio&arg1=Enviar"> <img src="/logo.jpeg" /> </a></td>
+
+
+
+			<td width="5000px">
+				<form class="flexsearch--form" action="busqueda">
+					<input type="hidden" name="tipoConsulta" value="modelo"/>
+					<input class="flexsearch--input" type="search" name="arg1" placeholder="buscar">
+					<input class="flexsearch--submit" type="submit" value="Buscar" />
+				</form>
+			</td>
+			<td>
+				{{#a}}
+					<form action="/busqueda">
+						<input type="hidden" name="tipoConsulta" value="logear"/>
+						<input name="arg1" type="text" placeholder="usuario">
+						<input name="arg2" type="text" placeholder="password">
+						<input type="submit" value="Entrar"/>
+					</form>
+					<form action="/registro">
+						<input type="submit" value="Registrar" />
+						<input name="nombre" type="hidden">
+						<input name="apellidos" type="hidden">
+						<input name="correo" type="hidden">
+						<input name="pass" type="hidden">
+						<input name="telefono" type="hidden">
+						<input name="alta" type="hidden" value="0">
+					</form>
+				{{/a}}
+				{{#b}}
+					Hola, {{nombreUsuario}}!<br>
+					<form action="/busqueda">
+						<input type="hidden" name="tipoConsulta" value="logout"/>
+						<input type="submit" value="Log out"/>
+					</form>
+				
+				{{/b}}
+				{{#c}}
+					Combinacion incorrecta
+				{{/c}}
+			</td>
+
+
+			<td><img src="/carrito.png" style="width: 100px; height: 70px;">
+			</td>
+		</tr>
+		<tr>
+			<!--FILA 2 -->
+			<td>
+				<!--columna1 vacia  -->
+			</td>
+			<td>
+				<form action="action_page.php">
+					<select onchange="location = this.value;">
+						<option selected disabled hidden>Marcas</option>
+						<option value="busqueda?tipoConsulta=marca&arg1=samsung">Samsung</option>
+						<option value="busqueda?tipoConsulta=marca&arg1=lg">Lg</option>
+						<option value="busqueda?tipoConsulta=marca&arg1=huawei">Huawei</option>
+						<option value="busqueda?tipoConsulta=marca&arg1=xiaomi">Xiaomi</option>
+					</select>
+					<a href="busqueda?tipoConsulta=oferta&arg1=true" style="color: #FFFFFF;"> Ofertas</a> 
+					<a href="foro"	style="color: #FFFFFF;"> Foro</a> 
+					<a href="busqueda?tipoConsulta=contacto" style="color: #FFFFFF;"> Contacto</a>
+					
+				</form>
+	</table>
+
+</header>
+
+</html>
