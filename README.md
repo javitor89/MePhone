@@ -51,27 +51,27 @@ Una zona de accesos directos a otras partes de la web para mejorar la experienci
 Una zona central con las ofertas más destacadas de los productos de la web.
 ![paginaprincipal](https://github.com/javitor89/MePhone/blob/master/capturas/Principal.JPG)
 
-*Zona registro:
+* Zona registro:
 Nos podemos registrar en la página web.
 ![registro](https://github.com/javitor89/MePhone/blob/master/capturas/Registro.JPG)
 
-*Login:
+* Login:
 Nos podemos logear en la web.
 ![ventanalogin](https://github.com/javitor89/MePhone/blob/master/capturas/login.JPG)
 
-*Sesión o cerrar mi sesión:
+* Sesión o cerrar mi sesión:
 Tener la sesión o cerrarla en cualquier momento.
 ![logeado](https://github.com/javitor89/MePhone/blob/master/capturas/Logeado.JPG)
 
-*Barra de búsqueda:
+* Barra de búsqueda:
 Utilizar nuestra zona de búsqueda flotante para consultar cualquier artículo que tengamos en venta en la web.
 ![barradebusqueda](https://github.com/javitor89/MePhone/blob/master/capturas/Barra%20de%20busqueda.JPG)
 
-*Ofertas:
+* Ofertas:
 Sección con las ofertas que tenemos en estos momentos.
 ![ofertas](https://github.com/javitor89/MePhone/blob/master/capturas/ofertas.JPG)
 
-*Contacto:
+* Contacto:
 Una parte para contactar con los administradores de la tienda.
 ![contacto](https://github.com/javitor89/MePhone/blob/master/capturas/Contacto.JPG)
 
