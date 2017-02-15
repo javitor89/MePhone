@@ -47,4 +47,4 @@ Xiong Yi fu -- correo: Xy.fu@alumnos.urjc.es -- cuenta GitHub: Xyfuliu
 
 * Página Principal:
 
-![paginaprincipal](url completa de la imagen)
+![paginaprincipal](https://github.com/javitor89/MePhone/blob/master/capturas/Principal.JPG)
