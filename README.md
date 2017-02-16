@@ -76,4 +76,4 @@ Una parte para contactar con los administradores de la tienda.
 ![contacto](https://github.com/javitor89/MePhone/blob/master/capturas/Contacto.JPG)
 
 #  Diagrama de clases:
-![uml]()
+![uml](https://github.com/javitor89/MePhone/blob/master/capturas/uml.JPG)
