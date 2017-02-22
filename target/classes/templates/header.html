@@ -41,7 +41,10 @@
 						<input type="hidden" name="tipoConsulta" value="logout"/>
 						<input type="submit" value="Log out"/>
 					</form>
-				
+					<form action="/busqueda">
+						<input type="hidden" name="tipoConsulta" value="listaDeseos"/>
+						<input type="submit" value="Lista de deseos"/>
+					</form>
 				{{/b}}
 				{{#c}}
 					Combinacion incorrecta
@@ -49,7 +52,10 @@
 			</td>
 
 
-			<td><img src="/carrito.png" style="width: 100px; height: 70px;">
+			<td>
+			{{#b}}
+				<a href="/busqueda?tipoConsulta=carro"><img src="/carrito.png" style="width: 100px; height: 70px;"></a>
+			{{/b}}
 			</td>
 		</tr>
 		<tr>

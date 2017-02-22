@@ -99,8 +99,10 @@ body {
 		<span style="font-size:30px; cursor:pointer" onclick="openNav()">&#9776; Menu de busqueda</span>.
 		<br><br>
 		<span style="font-size:20px;" id="demo" >Resultado de la busqueda:</span><br><br><br>
+		
 		{{#vista}}
-			Modelo:{{movil.modelo}}<br>
+			<p style="margin-left : 2em;">
+			Modelo: {{movil.modelo}}<br>
 			Marca: {{movil.marca}}<br>
 			Pulgadas: {{movil.pulgadas}}<br>
 			Bateria: {{movil.bateria}}<br>
@@ -110,11 +112,32 @@ body {
 			Camara: {{movil.camara}}<br>
 			Precio: {{movil.precio}}<br>
 			Stock: {{movil.stock}}<br>
-			Imagen: {{movil.imagen}}<br>
-			Oferta: {{movil.oferta}}<br><br>
+			Oferta: {{movil.oferta}}<br>
+			<img src="/{{movil.imagen.nombre}}" style="width:304px;height:228px;"><br><br></p>
+			{{#b}}
+			<form action="/busqueda">
+				<p style="margin-left : 2em;">
+				<input type="hidden" name="tipoConsulta" value="agregarAlCarrito"/>
+				<input name="arg1" type="hidden" value="{{movil.idMovil}}">
+				<input type="submit" value="Agregar al carrito"/></p>
+			</form>
+		    <form action="/busqueda">
+		    	<p style="margin-left : 2em;">
+			    <input type="hidden" name="tipoConsulta" value="agregarDeseo"/>
+			    <input type="hidden" name="arg1" value="{{movil.idMovil}}"/>
+			    <input type="submit" value="Add a Lista Deseos"/></p>
+		    </form><br>
+			{{/b}}
 		{{/vista}}
+		
+		{{#carro}}
+			{{#carrito}}
+				- Modelo: {{modelo}}, Marca: {{marca}}. <br> <a href="/busqueda?tipoConsulta=vista&arg1={{idMovil}}"><img src="/{{imagen.nombre}}" style="width:304px;height:228px;"></a> <br><br><br>
+			{{/carrito}}
+		{{/carro}}
+		
 		{{#moviles}}
-			- Modelo: {{modelo}}, Marca: {{marca}}. <br> <a href="/busqueda?tipoConsulta=vista&arg1={{idMovil}}"><img src="/{{imagen}}" style="width:304px;height:228px;"></a> <br><br><br>
+			- Modelo: {{modelo}}, Marca: {{marca}}. <br> <a href="/busqueda?tipoConsulta=vista&arg1={{idMovil}}"><img src="/{{imagen.nombre}}" style="width:304px;height:228px;"></a> <br><br><br>
 		{{/moviles}}
 		{{> footer}}
 	</div>
@@ -138,7 +161,7 @@ if (var1 == "stock") {
     document.getElementById("demo").innerHTML = "Recomendaciones:";
 }
 if (var1 == "contacto") {
-    document.getElementById("demo").innerHTML = "Contacto:<br><br>diegoherradonlizana@gmail.com<br>javier.millan@gmail.com<br>dario@gmail.com";
+    document.getElementById("demo").innerHTML = "Contacto:<br><br>diegoherradonlizana@gmail.com<br>javier.millan@gmail.com";
 }
 if (var1 == "logear") {
     document.getElementById("demo").innerHTML = "Bienvenido";
@@ -151,6 +174,12 @@ if (var1 == "incorrecta") {
 }
 if (var1 == "vista") {
     document.getElementById("demo").innerHTML = "Detalles de producto:";
+}
+if (var1 == "carro") {
+    document.getElementById("demo").innerHTML = "Este es su carrito:";
+}
+if (var1 == "deseos") {
+    document.getElementById("demo").innerHTML = "Estos son tus deseos:";
 }
 </script>
 

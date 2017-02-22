@@ -1,9 +1,11 @@
 package es.sidelab.MePhone.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 
 @Entity
@@ -23,8 +25,10 @@ public class Movil {
 	private int precio;
 	private int stock;
 	private int vendidas;
-	private String imagen;
 	private String oferta;
+
+	@OneToOne(cascade=CascadeType.ALL)
+	private Imagen imagen;
 	
 	public Movil(){}
 	
@@ -40,7 +44,7 @@ public class Movil {
 		this.precio = 1;
 		this.stock = 2;
 		this.vendidas = 3;
-		this.imagen = "nexus5.png";
+		this.imagen = new Imagen();
 		this.oferta = "true";
 	}
 	
@@ -140,11 +144,11 @@ public class Movil {
 		this.vendidas = vendidas;
 	}
 
-	public String getImagen() {
+	public Imagen getImagen() {
 		return imagen;
 	}
 
-	public void setImagen(String imagen) {
+	public void setImagen(Imagen imagen) {
 		this.imagen = imagen;
 	}
 
@@ -162,8 +166,10 @@ public class Movil {
 		return "Movil [idMovil=" + idMovil + ", modelo=" + modelo + ", marca=" + marca + ", pulgadas=" + pulgadas
 				+ ", bateria=" + bateria + ", almacenamiento=" + almacenamiento + ", ram=" + ram + ", resolucion="
 				+ resolucion + ", camara=" + camara + ", precio=" + precio + ", stock=" + stock + ", vendidas="
-				+ vendidas + ", imagen=" + imagen + ", oferta=" + oferta + "]";
+				+ vendidas + ", oferta=" + oferta + ", imagen=" + imagen + "]";
 	}
+
+
 
 
 

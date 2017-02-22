@@ -1,13 +1,19 @@
 package es.sidelab.MePhone.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import es.sidelab.MePhone.repository.ImagenRepository;
 import es.sidelab.MePhone.repository.MovilRepository;
 import es.sidelab.MePhone.repository.UsuarioRepository;
+import es.sidelab.MePhone.model.Carro;
+import es.sidelab.MePhone.model.Imagen;
 import es.sidelab.MePhone.model.Movil;
 import es.sidelab.MePhone.model.Usuario;
 
@@ -102,6 +108,31 @@ public class BusquedaController {
 			model.addAttribute("movil", repositorioMoviles.findByIdMovil(Integer.parseInt(arg1)));
 			model.addAttribute("text", "vista");
 			model.addAttribute("vista", true);
+			break;
+		case "agregarAlCarrito":
+			Movil m = repositorioMoviles.findByIdMovil(Integer.parseInt(arg1));
+			List<Movil> p = repositorioUsuarios.findByIdUsuario(id).getCarro().getProductos();
+			p.add(m);
+			repositorioUsuarios.findByIdUsuario(id).getCarro().setProductos(p);
+			repositorioUsuarios.save(repositorioUsuarios.findByIdUsuario(id));
+			break;
+		case "agregarDeseo":
+		    Movil m1 = repositorioMoviles.findByIdMovil(Integer.parseInt(arg1));
+		    List<Movil> p1 = repositorioUsuarios.findByIdUsuario(id).getListaDeseos().getListaProductos();
+		    p1.add(m1);
+		    repositorioUsuarios.findByIdUsuario(id).getListaDeseos().setListaProductos(p1);
+		    model.addAttribute("moviles", repositorioUsuarios.findByIdUsuario(id).getListaDeseos().getListaProductos());
+		    repositorioUsuarios.save(repositorioUsuarios.findByIdUsuario(id));
+		    break;
+		case "carro":
+			model.addAttribute("moviles", repositorioUsuarios.findByIdUsuario(id).getCarro().getProductos());
+			model.addAttribute("text", "carro");
+			model.addAttribute("carro", true);
+			break;
+		case "listaDeseos":
+			model.addAttribute("moviles", repositorioUsuarios.findByIdUsuario(id).getListaDeseos().getListaProductos());
+			model.addAttribute("text", "deseos");
+			model.addAttribute("deseos", true);
 			break;
 		default:
 			model.addAttribute("moviles", null);

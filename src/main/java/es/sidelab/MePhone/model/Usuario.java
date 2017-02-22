@@ -1,9 +1,11 @@
 package es.sidelab.MePhone.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 
 
@@ -19,6 +21,12 @@ public class Usuario {
 	private String pass;
 	private String telefono;
 	
+	@OneToOne(cascade=CascadeType.ALL)
+	private Carro carro;
+	
+	@OneToOne(cascade=CascadeType.ALL)
+	private ListaDeseos listaDeseos;
+	
 	public Usuario(){
 		
 	}
@@ -29,7 +37,8 @@ public class Usuario {
 		this.correo = correo;
 		this.pass = pass;
 		this.telefono = telefono;
-		
+		this.carro = new Carro();
+		this.listaDeseos = new ListaDeseos();
 	}
 
 	public long getIdUsuario() {
@@ -80,11 +89,30 @@ public class Usuario {
 		this.telefono = telefono;
 	}
 
+	public Carro getCarro() {
+		return carro;
+	}
+
+	public void setCarro(Carro carro) {
+		this.carro = carro;
+	}
+
+	public ListaDeseos getListaDeseos() {
+		return listaDeseos;
+	}
+
+	public void setListaDeseos(ListaDeseos listaDeseos) {
+		this.listaDeseos = listaDeseos;
+	}
+
 	@Override
 	public String toString() {
 		return "Usuario [idUsuario=" + idUsuario + ", nombre=" + nombre + ", apellidos=" + apellidos + ", correo="
-				+ correo + ", pass=" + pass + ", telefono=" + telefono + "]";
+				+ correo + ", pass=" + pass + ", telefono=" + telefono + ", carro=" + carro + ", listaDeseos="
+				+ listaDeseos + "]";
 	}
+
+
 
 	
 
