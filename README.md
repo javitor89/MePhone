@@ -18,15 +18,16 @@ El acceso a toda la parte de administración de la cuenta de usuario tanto en la
 
 # Entidades principales:
 
-Usuario: Compra un producto en la web o utiliza la parte del foro para diferentes consultas o aporte al mismo. Además también dispondrá de una cuenta privada donde puede gestionar sus compras.
+
+Usuario: Navegación por nuestros diferentes terminales de venta y seguimiento o compra de producto en la web .
 
 Producto: En nuestro caso los teléfonos móviles que ponemos a la venta en la web.
 
-Carro de la compra: Donde los usuarios pueden ir agregando productos para comprar.
+Carrito: Donde los usuarios pueden ir agregando productos para posteriormente comprar.
 
-Mensaje: Los textos posteados en el foro.
+Lista de deseos: Los clientes puede guardar productos favoritos para comprarlos posteriormente.
 
-Foro: Apartado de consulta, aporte y resolución de dudas y más información de valor para los usuarios de la web.
+imagen: imagen del teléfono móvil
 
 # Servicios internos:
 
