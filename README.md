@@ -42,8 +42,6 @@ Javier Millán Campiña  -- correo: j.mollan@alumnos.urjc.es -- cuenta GitHub: j
 
 Diego Herradon Lizana -- correo: d.herradon@alumnos.urjc.es -- cuenta GitHub: DiegoHL
 
-Xiong Yi fu -- correo: Xy.fu@alumnos.urjc.es -- cuenta GitHub: Xyfuliu
-
 #  Navegacion y descripcion de la web:
 
 * Página Principal:
