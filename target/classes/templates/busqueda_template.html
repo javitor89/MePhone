@@ -113,7 +113,7 @@ body {
 			Precio: {{movil.precio}}<br>
 			Stock: {{movil.stock}}<br>
 			Oferta: {{movil.oferta}}<br>
-			<img src="/{{movil.imagen.nombre}}" style="width:304px;height:228px;"><br><br></p>
+			<img src="/nexus5" style="width:304px;height:228px;"><br><br></p>
 			{{#b}}
 			<form action="/busqueda">
 				<p style="margin-left : 2em;">
@@ -130,11 +130,7 @@ body {
 			{{/b}}
 		{{/vista}}
 		
-		{{#carro}}
-			{{#carrito}}
-				- Modelo: {{modelo}}, Marca: {{marca}}. <br> <a href="/busqueda?tipoConsulta=vista&arg1={{idMovil}}"><img src="/{{imagen.nombre}}" style="width:304px;height:228px;"></a> <br><br><br>
-			{{/carrito}}
-		{{/carro}}
+		
 		
 		{{#moviles}}
 			- Modelo: {{modelo}}, Marca: {{marca}}. <br> <a href="/busqueda?tipoConsulta=vista&arg1={{idMovil}}"><img src="/{{imagen.nombre}}" style="width:304px;height:228px;"></a> <br><br><br>
@@ -163,9 +159,6 @@ if (var1 == "stock") {
 if (var1 == "contacto") {
     document.getElementById("demo").innerHTML = "Contacto:<br><br>diegoherradonlizana@gmail.com<br>javier.millan@gmail.com";
 }
-if (var1 == "logear") {
-    document.getElementById("demo").innerHTML = "Bienvenido";
-}
 if (var1 == "logout") {
     document.getElementById("demo").innerHTML = "Sesion cerrada";
 }
@@ -174,9 +167,6 @@ if (var1 == "incorrecta") {
 }
 if (var1 == "vista") {
     document.getElementById("demo").innerHTML = "Detalles de producto:";
-}
-if (var1 == "carro") {
-    document.getElementById("demo").innerHTML = "Este es su carrito:";
 }
 if (var1 == "deseos") {
     document.getElementById("demo").innerHTML = "Estos son tus deseos:";

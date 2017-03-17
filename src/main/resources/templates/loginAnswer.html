@@ -1,0 +1,23 @@
+{{> header}}
+<html>
+<body>
+
+{{#success}}
+	Login realizado con exito. <br>
+	<form action="/busqueda?tipoConsulta=inicio&arg1=Enviar" >
+		<input type="hidden" name="tipoConsulta" value="inicio"/>
+		<input type="submit" value="Aceptar"/>
+	</form>
+{{/success}}
+
+{{#unsuccess}}
+	El usuario y la contraseña no coinciden. <br>
+	<form action="/login">
+		<input type="submit" value="Volver a logearse "/>
+	</form>
+	
+{{/unsuccess}}
+
+</body>
+</html>
+{{> footer}}

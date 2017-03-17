@@ -1,0 +1,13 @@
+{{> header}}
+<html>
+<body>
+
+Este es tu carrito:
+
+	{{#carrito}}
+		- Modelo: {{modelo}}, Marca: {{marca}}. <br> <a href="/busqueda?tipoConsulta=vista&arg1={{idMovil}}"><img src="/{{imagen.nombre}}" style="width:304px;height:228px;"></a> <br><br><br>
+	{{/carrito}}
+		
+</body>
+</html>
+{{> footer}}

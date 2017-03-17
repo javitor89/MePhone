@@ -1,0 +1,26 @@
+{{> header}}
+<html>
+<body>
+
+*** LOGIN DE USUARIO ***
+
+	<form action="/loginAnswer">
+		<input name="name" type="text" placeholder="name">
+		<input name="pass" type="text" placeholder="password">
+		<input type="submit" value="Entrar"/>
+	</form>
+
+
+	<form action="/registro">
+		<input type="submit" value="Ir a registro" />
+		<input name="nombre" type="hidden">
+		<input name="apellidos" type="hidden">
+		<input name="correo" type="hidden">
+		<input name="pass" type="hidden">
+		<input name="telefono" type="hidden">
+		<input name="alta" type="hidden" value="0">
+	</form>
+
+</body>
+</html>
+{{> footer}}

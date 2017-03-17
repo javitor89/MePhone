@@ -1,0 +1,13 @@
+{{> header}}
+<html>
+<body>
+
+Estos son tus deseos:
+
+	{{#deseos}}
+		- Modelo: {{modelo}}, Marca: {{marca}}. <br> <a href="/busqueda?tipoConsulta=vista&arg1={{idMovil}}"><img src="/{{imagen.nombre}}" style="width:304px;height:228px;"></a> <br><br><br>
+	{{/deseos}}
+		
+</body>
+</html>
+{{> footer}}

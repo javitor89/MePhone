@@ -19,11 +19,8 @@
 			</td>
 			<td>
 				{{#a}}
-					<form action="/busqueda">
-						<input type="hidden" name="tipoConsulta" value="logear"/>
-						<input name="arg1" type="text" placeholder="usuario">
-						<input name="arg2" type="text" placeholder="password">
-						<input type="submit" value="Entrar"/>
+					<form action="/login">
+					 	<input type="submit" value="Logearse"/>
 					</form>
 					<form action="/registro">
 						<input type="submit" value="Registrar" />
@@ -34,15 +31,13 @@
 						<input name="telefono" type="hidden">
 						<input name="alta" type="hidden" value="0">
 					</form>
-				{{/a}}
+		        {{/a}}
 				{{#b}}
-					Hola, {{nombreUsuario}}!<br>
-					<form action="/busqueda">
-						<input type="hidden" name="tipoConsulta" value="logout"/>
+					Hola!<br>
+					<form action="/logout">
 						<input type="submit" value="Log out"/>
 					</form>
-					<form action="/busqueda">
-						<input type="hidden" name="tipoConsulta" value="listaDeseos"/>
+					<form action="/deseos">
 						<input type="submit" value="Lista de deseos"/>
 					</form>
 				{{/b}}
@@ -54,7 +49,7 @@
 
 			<td>
 			{{#b}}
-				<a href="/busqueda?tipoConsulta=carro"><img src="/carrito.png" style="width: 100px; height: 70px;"></a>
+				<a href="/carrito"> <img src="/carrito.png" style="width: 100px; height: 70px;"></a>
 			{{/b}}
 			</td>
 		</tr>
@@ -73,7 +68,6 @@
 						<option value="busqueda?tipoConsulta=marca&arg1=xiaomi">Xiaomi</option>
 					</select>
 					<a href="busqueda?tipoConsulta=oferta&arg1=true" style="color: #FFFFFF;"> Ofertas</a> 
-					<a href="foro"	style="color: #FFFFFF;"> Foro</a> 
 					<a href="busqueda?tipoConsulta=contacto" style="color: #FFFFFF;"> Contacto</a>
 					
 				</form>

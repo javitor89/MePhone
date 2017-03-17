@@ -7,9 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.SessionScope;
+
 
 
 @Entity
+@Component
+@SessionScope
+
 public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
