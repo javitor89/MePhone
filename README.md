@@ -74,7 +74,7 @@ Una parte para contactar con los administradores de la tienda.
 ![uml](https://github.com/javitor89/MePhone/blob/master/capturas/UML1.JPG) 
 
 #  Diagrama ER:
-![uml](https://github.com/javitor89/MePhone/blob/master/capturas/ER.JPG) 
+![uml](https://github.com/javitor89/MePhone/blob/master/capturas/ER.jpg) 
 
 #  Forma de acceso a la web:
 
