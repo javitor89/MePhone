@@ -78,7 +78,7 @@ Una parte para contactar con los administradores de la tienda.
 
 #  Comandos utilizados para la configuración de azure y las máquinas virtuales:
 
-###Entrar a la maquina###
+* Entrar a la maquina
                            
 ServInterno1: ssh -i azureus.key -p 52002 azureuser@40.69.37.9
 ServInterno2: ssh -i azureus.key -p 50845 azureuser@40.69.37.9
