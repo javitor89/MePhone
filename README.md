@@ -81,17 +81,23 @@ Una parte para contactar con los administradores de la tienda.
 * Entrar a la maquina
                            
 ServInterno1: ssh -i azureus.key -p 52002 azureuser@40.69.37.9
+
 ServInterno2: ssh -i azureus.key -p 50845 azureuser@40.69.37.9
+
 ServBD1: ssh -i azureus.key -p 51285 azureuser@40.69.37.9
+
 ServBD2: ssh -i azureus.key -p 55517 azureuser@40.69.37.9
+
 ServWeb1: ssh -i azureus.key -p 58485 azureuser@40.69.37.9
+
 ServWeb2: ssh -i azureus.key -p 55215 azureuser@40.69.37.9
+
 ServBalance: ssh -i azureus.key -p 55466 azureuser@40.69.37.9
 ------
 ssh -o IdentitiesOnly=true -i azureus.key azureuser@13.79.236.229
 
 
-###Instalar jar###
+* Instalar jar
 ServWeb1: scp -i azureus.key -P 58485 MePhone-0.0.1-SNAPSHOT.jar azureuser@40.69.37.9:/home/azureuser/MePhone-0.0.1-SNAPSHOT.jar
 ServWeb2: scp -i azureus.key -P 55215 MePhone-0.0.1-SNAPSHOT.jar azureuser@40.69.37.9:/home/azureuser/MePhone-0.0.1-SNAPSHOT.jar
 ServInterno: scp -i azureus.key -P 52002 MailMailMail90-0.0.1-SNAPSHOT.jar azureuser@40.69.37.9:/home/azureuser/MailMailMail90-0.0.1-SNAPSHOT.jar
