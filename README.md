@@ -1,9 +1,6 @@
 # MePhone
 
-[![MePhone](http://i63.tinypic.com/2rg0uag.jpg)(https://www.youtube.com/watch?v=3qWNKigNENM&feature=youtu.be)
-
-
-
+[![IMAGE ALT TEXT](http://i63.tinypic.com/2rg0uag.jpg)](https://www.youtube.com/watch?v=3qWNKigNENM&feature=youtu.be)
 
 # Descripción de la temática de la web
 
