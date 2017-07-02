@@ -160,6 +160,8 @@ public class Movil {
 	public void setOferta(String oferta) {
 		this.oferta = oferta;
 	}
+	
+
 
 	@Override
 	public String toString() {

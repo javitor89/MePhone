@@ -4,9 +4,10 @@
 
 *** LOGIN DE USUARIO ***
 
-	<form action="/loginAnswer">
-		<input name="name" type="text" placeholder="name">
-		<input name="pass" type="text" placeholder="password">
+	<form action="/login" method="post">
+		<input name="name" type="text" >
+		<input name="pass" type="password">   
+		<input type="hidden" name="_csrf" value="{{token}}">
 		<input type="submit" value="Entrar"/>
 	</form>
 

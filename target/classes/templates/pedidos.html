@@ -1,0 +1,16 @@
+{{> header}}
+<html>
+<body>
+
+Estos son tus Pedidos:<br><br>
+
+{{#pedidos}}
+	 PEDIDO ID: {{idPedido}}: <br>
+	Productos: {{#recibo}}
+		{{recibo}}
+	{{/recibo}}<br><br>
+{{/pedidos}}
+
+</body>
+</html>
+{{> footer}}

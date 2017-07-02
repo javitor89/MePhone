@@ -7,5 +7,4 @@ import es.sidelab.MePhone.model.Imagen;
 public interface ImagenRepository extends JpaRepository<Imagen, Long>{
 	
 	Imagen findByIdImagen (long idImagen);
-	
-}
+	}

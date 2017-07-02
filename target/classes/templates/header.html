@@ -33,12 +33,14 @@
 					</form>
 		        {{/a}}
 				{{#b}}
-					Hola!<br>
+					<p style="color:#FFFFFF";>Bienvenido,<br> {{nombreUsuario}}</p>
+					<form action="/miCuenta">
+						<input type="submit" value="Mi Cuenta"/>
+					</form>
+
 					<form action="/logout">
 						<input type="submit" value="Log out"/>
-					</form>
-					<form action="/deseos">
-						<input type="submit" value="Lista de deseos"/>
+						<input type="hidden" name="_csrf" value="{{token}}">
 					</form>
 				{{/b}}
 				{{#c}}
@@ -49,7 +51,13 @@
 
 			<td>
 			{{#b}}
-				<a href="/carrito"> <img src="/carrito.png" style="width: 100px; height: 70px;"></a>
+			
+			<td><form action="/carrito">
+				<input type=image src="/carro.jpg" width="100" height="100">
+					<input type="hidden" name="tipoConsulta" value="0"/>
+					<input type="hidden" name="arg1" value="0"/>
+
+					</form></td>
 			{{/b}}
 			</td>
 		</tr>

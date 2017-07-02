@@ -1,12 +1,22 @@
 package es.sidelab.MePhone.model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import javax.persistence.CascadeType;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
@@ -29,22 +39,25 @@ public class Usuario {
 	
 	@OneToOne(cascade=CascadeType.ALL)
 	private Carro carro;
+
+	@LazyCollection(LazyCollectionOption.FALSE)
+	@OneToMany(cascade=CascadeType.ALL)
+	private List<Pedido> pedidos;
 	
-	@OneToOne(cascade=CascadeType.ALL)
-	private ListaDeseos listaDeseos;
+	@ElementCollection(fetch = FetchType.EAGER)
+	private List<String> roles;
 	
-	public Usuario(){
-		
-	}
+	public Usuario(){	}
 	
-	public Usuario(String nombre, String apellidos, String correo,String pass, String telefono ) {
+	public Usuario(String nombre, String apellidos, String pass, String correo, String telefono, List<String> roles ) {
 		this.nombre = nombre;
 		this.apellidos = apellidos;
+		this.pass = new BCryptPasswordEncoder().encode(pass);
 		this.correo = correo;
-		this.pass = pass;
 		this.telefono = telefono;
 		this.carro = new Carro();
-		this.listaDeseos = new ListaDeseos();
+		this.roles = roles;
+		 
 	}
 
 	public long getIdUsuario() {
@@ -84,7 +97,7 @@ public class Usuario {
 	}
 
 	public void setPass(String pass) {
-		this.pass = pass;
+		this.pass = new BCryptPasswordEncoder().encode(pass);
 	}
 
 	public String getTelefono() {
@@ -103,20 +116,31 @@ public class Usuario {
 		this.carro = carro;
 	}
 
-	public ListaDeseos getListaDeseos() {
-		return listaDeseos;
+	public List<Pedido> getPedidos() {
+		return pedidos;
 	}
 
-	public void setListaDeseos(ListaDeseos listaDeseos) {
-		this.listaDeseos = listaDeseos;
+	public void setPedidos(List<Pedido> pedidos) {
+		this.pedidos = pedidos;
+	}
+
+	public List<String> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
 	}
 
 	@Override
 	public String toString() {
 		return "Usuario [idUsuario=" + idUsuario + ", nombre=" + nombre + ", apellidos=" + apellidos + ", correo="
-				+ correo + ", pass=" + pass + ", telefono=" + telefono + ", carro=" + carro + ", listaDeseos="
-				+ listaDeseos + "]";
+				+ correo + ", pass=" + pass + ", telefono=" + telefono + ", carro=" + carro + ", pedidos=" + pedidos
+				+ ", roles=" + roles + "]";
 	}
+
+
+
 
 
 

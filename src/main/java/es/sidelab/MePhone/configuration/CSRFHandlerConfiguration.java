@@ -1,4 +1,5 @@
-/*package es.sidelab.MePhone.configuration;
+package es.sidelab.MePhone.configuration;
+
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,6 +13,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 @Configuration
 public class CSRFHandlerConfiguration extends WebMvcConfigurerAdapter {
+	
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new CSRFHandlerInterceptor());
@@ -20,9 +22,11 @@ public class CSRFHandlerConfiguration extends WebMvcConfigurerAdapter {
 
 class CSRFHandlerInterceptor extends HandlerInterceptorAdapter {
 	@Override
-	public void postHandle(final HttpServletRequest request, final HttpServletResponse response, final Object handler,
+	public void postHandle(final HttpServletRequest request, 
+			final HttpServletResponse response, final Object handler,
 			final ModelAndView modelAndView) throws Exception {
-		CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
-		modelAndView.addObject("token", token.getToken());
-	}
-}*/
+		
+		CsrfToken token = (CsrfToken) request.getAttribute("_csrf"); 
+    	modelAndView.addObject("token", token.getToken());    	
+    }
+}

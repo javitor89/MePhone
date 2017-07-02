@@ -1,0 +1,14 @@
+{{> header}}
+<html>
+<body>
+
+*** LOGOUT ***
+
+	<form action="/logout" method="post">
+		<input type="hidden" name="_csrf" value="{{token}}">
+		<input type="submit" value="Aceptar"/>
+	</form>
+
+</body>
+</html>
+{{> footer}}

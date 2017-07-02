@@ -1,0 +1,17 @@
+es\sidelab\MePhone\model\Movil.class
+es\sidelab\MePhone\model\Carro.class
+es\sidelab\MePhone\configuration\CSRFHandlerConfiguration.class
+es\sidelab\MePhone\configuration\CSRFHandlerInterceptor.class
+es\sidelab\MePhone\configuration\UserRepositoryAuthenticationProvider.class
+es\sidelab\MePhone\model\Pedido.class
+es\sidelab\MePhone\repository\ImagenRepository.class
+es\sidelab\MePhone\controller\WebController.class
+es\sidelab\MePhone\model\Usuario.class
+es\sidelab\MePhone\configuration\SecurityConfiguration.class
+es\sidelab\MePhone\repository\UsuarioRepository.class
+es\sidelab\MePhone\repository\CarroRepository.class
+es\sidelab\MePhone\Application.class
+es\sidelab\MePhone\controller\CacheController.class
+es\sidelab\MePhone\repository\MovilRepository.class
+es\sidelab\MePhone\repository\PedidoRepository.class
+es\sidelab\MePhone\model\Imagen.class

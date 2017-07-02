@@ -1,0 +1,29 @@
+{{> header}}
+<html>
+<body>
+---------MI CUENTA 2-------<br><br>
+
+Nombre: {{usuario.nombre}} {{usuario.apellidos}}<br>
+Correo: {{usuario.correo}}<br>
+Telefono: {{usuario.telefono}}<br><br>
+
+ 
+
+<form action="carrito">
+	<input type="hidden" name="tipoConsulta" value="0"/>
+	<input type="hidden" name="arg1" value="0"/>
+	<input type="submit" value="Mi Carrito"/>
+</form>
+
+
+
+<form action="/pedidos">
+	<input type="submit" value="Mis Pedidos"/>
+</form>
+
+
+
+
+</body>
+</html>
+{{> footer}}

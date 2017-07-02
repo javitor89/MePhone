@@ -1,16 +1,21 @@
 package es.sidelab.MePhone.model;
 
-
 import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
+
 import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Carro {
@@ -18,14 +23,15 @@ public class Carro {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long idCarro;
 	
-	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+	@LazyCollection(LazyCollectionOption.FALSE)
+	@ManyToMany(cascade=CascadeType.ALL)
 	private List<Movil> productos;
 	
+	@JsonIgnore
 	@OneToOne(mappedBy="carro")
 	private Usuario usuario;
 
 	public Carro() {
-		
 	}
 
 	public long getIdCarro() {
@@ -51,6 +57,8 @@ public class Carro {
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
+	
+
 
 	@Override
 	public String toString() {

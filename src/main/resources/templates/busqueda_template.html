@@ -113,27 +113,22 @@ body {
 			Precio: {{movil.precio}}<br>
 			Stock: {{movil.stock}}<br>
 			Oferta: {{movil.oferta}}<br>
-			<img src="/nexus5" style="width:304px;height:228px;"><br><br></p>
+			<img src="/{{movil.imagen.nombre}}" style="width:304px;height:228px;"><br><br></p>
 			{{#b}}
-			<form action="/busqueda">
+			<form action="/carrito">
 				<p style="margin-left : 2em;">
-				<input type="hidden" name="tipoConsulta" value="agregarAlCarrito"/>
+				<input type="hidden" name="tipoConsulta" value="agregar"/>
 				<input name="arg1" type="hidden" value="{{movil.idMovil}}">
+				<input type="hidden" name="_csrf" value="{{token}}">
 				<input type="submit" value="Agregar al carrito"/></p>
 			</form>
-		    <form action="/busqueda">
-		    	<p style="margin-left : 2em;">
-			    <input type="hidden" name="tipoConsulta" value="agregarDeseo"/>
-			    <input type="hidden" name="arg1" value="{{movil.idMovil}}"/>
-			    <input type="submit" value="Add a Lista Deseos"/></p>
-		    </form><br>
 			{{/b}}
 		{{/vista}}
 		
 		
 		
 		{{#moviles}}
-			- Modelo: {{modelo}}, Marca: {{marca}}. <br> <a href="/busqueda?tipoConsulta=vista&arg1={{idMovil}}"><img src="/{{imagen.nombre}}" style="width:304px;height:228px;"></a> <br><br><br>
+			- Modelo: {{modelo}}, Marca: {{marca}}. <br> <a href="/busqueda?tipoConsulta=vista&arg1={{idMovil}}"><img src="/{{imagen.nombre}}" style="width:204px;height:128px;"></a> <br><br><br>
 		{{/moviles}}
 		{{> footer}}
 	</div>
