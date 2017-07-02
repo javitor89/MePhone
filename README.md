@@ -1,6 +1,8 @@
 # MePhone
 
-[linkname](https://www.youtube.com/watch?v=3qWNKigNENM&feature=youtu.be)
+[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=3qWNKigNENM&feature=youtu.be)
+
+
 
 
 # Descripción de la temática de la web
