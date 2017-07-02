@@ -1,6 +1,6 @@
 # MePhone
 
-[![Everything Is AWESOME](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=3qWNKigNENM&feature=youtu.be)
+[![Everything Is AWESOME](http://es.tinypic.com/r/2rg0uag/9)](https://www.youtube.com/watch?v=3qWNKigNENM&feature=youtu.be)
 
 
 
